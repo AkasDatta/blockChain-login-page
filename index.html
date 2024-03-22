@@ -1,179 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- tailwind css cdn  -->
-
-    <link rel="stylesheet" href="./css/style.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <title>BlockChain-login-page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Include the Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <!-- font-awesome cdn Jquary -->
+    <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+  >
 </head>
-<body>
-    <div style="background-color: #0C6CF2">
-        <h2 style="color: white; text-align: center; font-weight: normal; font-size: medium; padding-top: 5px; padding-bottom: 5px; margin-top: 0;">For your security, make sure the URL is <a style="font-weight: 700; color: white;" href="https://login.blockchain.com">https://login.blockchain.com</a></h2>
+
+<body class="bg-gray-900 text-white">
+    <div class="bg-blue-500 text-center py-2">
+        <p class="text-sm font-normal">For your security, make sure the URL is <a href="https://login.blockchain.com" class="font-semibold">https://login.blockchain.com</a></p>
     </div>
 
-    <div>
-      <h2 style="text-align: center; color: white;">Blockchain<span style="color: dimgrey;">.com</span></h2>
+    <div class="text-center my-8">
+        <h2 class="text-4xl">Blockchain<span class="text-gray-400">.com</span></h2>
     </div>
 
-    <div class="form">
-
-      <ul class="tab-group">
-        <li class="tab active">
-          <a class="aa" href="#login">
-            <img src="./image/wallet-no-background.svg" alt="" style="vertical-align: middle;"> <!-- Added inline style -->
-            Wallet
-          </a>
-        </li>
-        <li class="tab">
-          <a href="#signup">
-            <img src="./image/exchange-grayscale.svg" alt="" style="vertical-align: middle;"> <!-- Added inline style -->
-            Exchange
-          </a>
-        </li>
-      </ul>
-      
-    
-      <div class="tab-content">
-        <div id="signup">
-          <h1>Sign Up for Free</h1>
-    
-          <form action="/" method="post">
-    
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  First Name<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-    
-              <div class="field-wrap">
-                <label>
-                  Last Name<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-            </div>
-    
-            <div class="field-wrap">
-              <label>
-                Email Address<span class="req">*</span>
-              </label>
-              <input type="email" required autocomplete="off" />
-            </div>
-    
-            <div class="field-wrap">
-              <label>
-                Set A Password<span class="req">*</span>
-              </label>
-              <input type="password" required autocomplete="off" />
-            </div>
-    
-            <button type="submit" class="button button-block" />Get Started</button>
-    
-          </form>
-    
+    <!-- component -->
+    <div class=" flex items-center justify-center w-full">
+      <div class="bg-white dark:bg-white shadow-md rounded-lg max-w-2xl">
+        <div class="grid grid-cols-2 text-black text-lg lg:text-xl font-bold">
+          <button class="p-3 lg:p-4 text-[#7349F2] rounded-tl-lg"><i class="fa-solid fa-wallet text-xl pe-1"></i> Wallet</button>
+          <button class="bg-gray-200 p-3 lg:p-4 text-gray-500 rounded-tr-lg"><i class="fa-brands fa-stack-exchange text-xl pe-1"></i> Exchange</button>
         </div>
-    
-        <div id="login">
-          <h1>Welcome Back!</h1>
-    
-          <form action="/" method="post">
-    
-            <div class="field-wrap">
-              <label>
-                Email Address<span class="req">*</span>
-              </label>
-              <input type="email" required autocomplete="off" />
+        <form action="#" class="lg:px-24 px-8 py-6">
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+            <input type="email" id="email" class="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="your@email.com" required>
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
+            <input type="password" id="password" class="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter your password" required>
+            <a href="#"
+              class="text-xs text-gray-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Forgot
+              Password?</a>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <input type="checkbox" id="remember" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:outline-none" checked>
+              <label for="remember" class="ml-2 block text-sm text-gray-700 dark:text-gray-300">Remember me</label>
             </div>
-    
-            <div class="field-wrap">
-              <label>
-                Password<span class="req">*</span>
-              </label>
-              <input type="password" required autocomplete="off" />
-            </div>
-    
-            <p class="forgot"><a href="#">Forgot Password?</a></p>
-    
-            <button class="button button-block" />Log In</button>
-    
-          </form>
-        </div>
+            <a href="#"
+              class="text-xs text-indigo-500 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Create
+              Account</a>
+          </div>
+          <button onclick="alert("hello")" type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
+        </form>
       </div>
-    </div> 
+    </div>
 
-    <!-- javascript file link here -->
     <script>
-      // Function to handle input, textarea events
-      function handleInputEvents(event) {
-        var target = event.target,
-            label = target.previousElementSibling;
-
-        if (event.type === "keyup") {
-          if (target.value === "") {
-            label.classList.remove("active", "highlight");
-          } else {
-            label.classList.add("active", "highlight");
-          }
-        } else if (event.type === "blur") {
-          if (target.value === "") {
-            label.classList.remove("active", "highlight");
-          } else {
-            label.classList.remove("highlight");
-          }
-        } else if (event.type === "focus") {
-          if (target.value === "") {
-            label.classList.remove("highlight");
-          } else if (target.value !== "") {
-            label.classList.add("highlight");
-          }
-        }
-      }
-
-      // Attach events to inputs and textareas
-      var forms = document.querySelectorAll(".form");
-      forms.forEach(function(form) {
-        var inputs = form.querySelectorAll("input, textarea");
-        inputs.forEach(function(input) {
-          input.addEventListener("keyup", handleInputEvents);
-          input.addEventListener("blur", handleInputEvents);
-          input.addEventListener("focus", handleInputEvents);
-        });
-      });
-
-      // Function to handle tab clicks
-      function handleTabClick(event) {
-        event.preventDefault();
-
-        var tab = event.target.parentNode,
-            tabs = tab.parentNode.children,
-            target = event.target.getAttribute("href").substr(1),
-            tabContents = document.querySelectorAll(".tab-content > div");
-
-        for (var i = 0; i < tabs.length; i++) {
-          tabs[i].classList.remove("active");
-        }
-        tab.classList.add("active");
-
-        for (var j = 0; j < tabContents.length; j++) {
-          tabContents[j].style.display = "none";
-        }
-
-        document.getElementById(target).style.display = "block";
-      }
-
-      // Attach events to tab anchors
-      var tabAnchors = document.querySelectorAll(".tab a");
-      tabAnchors.forEach(function(anchor) {
-        anchor.addEventListener("click", handleTabClick);
-      });
 
     </script>
-    </body>
-    </html>
-    
+</body>
+
+</html>
