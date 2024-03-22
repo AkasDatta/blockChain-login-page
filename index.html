@@ -9,11 +9,13 @@
     <!-- Include the Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome cdn -->
-    <!-- font-awesome cdn Jquary -->
     <link
     rel="stylesheet"
     href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
-  >
+    >
+    <style>
+        /* Your custom CSS styles */
+    </style>
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -29,63 +31,75 @@
     <div class="flex items-center justify-center w-full mb-16">
       <div class="bg-white dark:bg-white shadow-md rounded-lg max-w-2xl">
         <div class="grid grid-cols-2 text-black text-lg lg:text-xl font-bold">
-          <button class="p-3 lg:p-4 text-[#7349F2] rounded-tl-lg"><i class="fa-solid fa-wallet text-xl pe-1"></i> Wallet</button>
-          <button class="bg-gray-200 p-3 lg:p-4 text-gray-500 rounded-tr-lg"><i class="fa-brands fa-stack-exchange text-xl pe-1"></i> Exchange</button>
+          <button onclick="showWalletForm()" id="walletBtn" class="p-3 lg:p-4 text-[#7349F2] rounded-tl-lg"><i class="fas fa-wallet text-xl pe-1"></i> Wallet</button>
+          <button onclick="showExchangeForm()" id="exchangeBtn" class="bg-gray-200 p-3 lg:p-4 text-gray-500 rounded-tr-lg"><i class="fab fa-stack-exchange text-xl pe-1"></i> Exchange</button>
         </div>
-        <form action="#" class="">
-          <div class="px-8 py-6">
-            <div class="mb-8">
-              <label for="email" class="block text-sm font-medium text-gray-800 mb-2">Email or Wallet ID</label>
-              <input type="email" id="email" class="shadow-sm rounded-md w-full lg:w-96 md:w-80 px-3 py-3 border border-blue-700 focus:outline-none focus:ring-indigo-900 focus:border-red-500 text-black" placeholder="Enter Email or Wallet ID" required>
+        <div id="walletForm">
+          <form action="#" class="">
+            <div class="px-8 py-6">
+              <div class="mb-8">
+                <label for="walletId" class="block text-sm font-medium text-gray-800 mb-2">Email or Wallet ID</label>
+                <input type="text" id="walletId" class="shadow-sm rounded-md w-full lg:w-96 md:w-80 px-3 py-3 border border-blue-700 focus:outline-none focus:ring-indigo-900 focus:border-red-500 text-black" placeholder="Enter Email or Wallet ID" required>
+              </div>
+              <button onclick="alert('Please')" type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0C6CF2] hover:bg-[#0959c8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-xl mb-3">Continue</button>
+              <div class="flex items-center justify-center mb-0">
+                <a href="import.html" class="text-sm font-semibold text-indigo-500 hover:text-indigo-700">Import Your Account</a>
+              </div>
             </div>
-            <button onclick="alert('Please')" type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0C6CF2] hover:bg-[#0959c8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-xl mb-3">Continue</button>
-            <div class="flex items-center justify-center mb-0">
-              <a href="import.html" class="text-sm font-semibold text-indigo-500 hover:text-indigo-700">Import Your Account</a>
+            <div>
+              <hr>
+              <h2 class="text-gray-600 px-6 py-5 font-semibold text-center">Don't have a BlockChain Account? <a href="#" class="text-md font-semibold text-indigo-500 hover:text-indigo-700">Sign up Now <i class="fas fa-arrow-right"></i></a></h2>
             </div>
-          </div>
-         
-
-          <div>
-            <hr>
-            <h2 class="text-gray-600 px-6 py-5 font-semibold text-center">Don't have a BlockChain Account? <a href="#" class="text-md font-semibold text-indigo-500 hover:text-indigo-700">Sign up Now <i class="fa-solid fa-arrow-right"></i></a></h2>
-          </div>
-          
-        </form>
-        
+          </form>
+        </div>
+        <div id="exchangeForm" class="hidden">
+          <form action="#" class="">
+            <div class="px-8 py-6">
+              <div class="mb-8">
+                <label for="email" class="block text-sm font-medium text-gray-800 mb-2">Email</label>
+                <input type="email" id="email" class="shadow-sm rounded-md w-full lg:w-96 md:w-80 px-3 py-3 border border-blue-700 focus:outline-none focus:ring-indigo-900 focus:border-red-500 text-black" placeholder="Enter Email" required>
+              </div>
+              <button onclick="alert('Please')" type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0C6CF2] hover:bg-[#0959c8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-xl mb-3">Continue</button>
+            </div>
+            <div>
+              <hr>
+              <h2 class="text-gray-600 px-6 py-5 font-semibold text-center">Don't have a BlockChain Account? <a href="#" class="text-md font-semibold text-indigo-500 hover:text-indigo-700">Sign up Now <i class="fas fa-arrow-right"></i></a></h2>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
-
-    <!-- footer option -->
-    
-    <!-- <footer>
-      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-gray-500 font-medium text-md px-5 py-2.5 text-center inline-flex items-center" type="button">English<svg class="w-2.5 h-2.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
-        </button>
-        
-        Dropdown menu
-        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-              </li>
-            </ul>
-        </div>
-    </footer> -->
-
     <script>
-
+      document.addEventListener("DOMContentLoaded", function() {
+        // Show wallet form by default
+        document.getElementById('walletForm').style.display = 'block';
+        // Set initial styles for buttons
+        document.getElementById('walletBtn').classList.add('text-[#7349F2]', 'bg-white');
+        document.getElementById('exchangeBtn').classList.add('text-gray-500', 'bg-gray-200');
+      });
+    
+      function showWalletForm() {
+        document.getElementById('walletForm').style.display = 'block';
+        document.getElementById('exchangeForm').style.display = 'none';
+        // Update button styles
+        document.getElementById('walletBtn').classList.remove('text-gray-500', 'bg-gray-200');
+        document.getElementById('walletBtn').classList.add('text-[#7349F2]', 'bg-white');
+        document.getElementById('exchangeBtn').classList.remove('text-[#7349F2]', 'bg-white');
+        document.getElementById('exchangeBtn').classList.add('text-gray-500', 'bg-gray-200');
+      }
+    
+      function showExchangeForm() {
+        document.getElementById('exchangeForm').style.display = 'block';
+        document.getElementById('walletForm').style.display = 'none';
+        // Update button styles
+        document.getElementById('exchangeBtn').classList.remove('text-gray-500', 'bg-gray-200');
+        document.getElementById('exchangeBtn').classList.add('text-[#7349F2]', 'bg-white');
+        document.getElementById('walletBtn').classList.remove('text-[#7349F2]', 'bg-white');
+        document.getElementById('walletBtn').classList.add('text-gray-500', 'bg-gray-200');
+      }
     </script>
+    
 </body>
 
 </html>
